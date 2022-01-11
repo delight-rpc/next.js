@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import * as DelightRPC from 'delight-rpc'
 
 export function createServer<IAPI>(
-  api: IAPI
+  api: DelightRPC.ImplementationOf<IAPI>
 , options: {
     basicAuth?: (username: string, password: string) => PromiseLike<boolean> | boolean
   , parameterValidators?: DelightRPC.ParameterValidators<IAPI>

@@ -29,7 +29,7 @@ export default createServer(api, {})
 ### createServer
 ```ts
 function createServer<IAPI>(
-  api: IAPI
+  api: DelightRPC.ImplementationOf<IAPI>
 , options: {
     basicAuth?: (username: string, password: string) => PromiseLike<boolean> | boolean
   , parameterValidators?: DelightRPC.ParameterValidators<IAPI>
