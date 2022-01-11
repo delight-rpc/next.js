@@ -17,7 +17,7 @@ export function createServer<IAPI>(
         const credentials = Buffer.from(result.groups.credentials, 'base64').toString('utf8')
         const [username, password] = credentials.split(':')
         if (await options.basicAuth(username, password)) {
-          await handle(req, res)
+          return await handle(req, res)
         }
       }
 
