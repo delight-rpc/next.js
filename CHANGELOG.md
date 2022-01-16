@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/delight-rpc/next.js/compare/v0.1.2...v0.1.3) (2022-01-16)
+
+
+### Features
+
+* add cache-control header ([3452aa3](https://github.com/delight-rpc/next.js/commit/3452aa3ad901b8a69671f6112f260543d2bcc79f))
+
 ### [0.1.2](https://github.com/delight-rpc/next.js/compare/v0.1.1...v0.1.2) (2022-01-11)
 
 
