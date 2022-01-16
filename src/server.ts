@@ -9,6 +9,8 @@ export function createServer<IAPI>(
   }
 ): (req: NextApiRequest, res: NextApiResponse) => Promise<void> {
   return async function (req: NextApiRequest, res: NextApiResponse): Promise<void> {
+    res.setHeader('Cache-Control', 'no-store')
+
     if (options.basicAuth) {
       const basicAuthRegExp = /^Basic (?<credentials>[A-Za-z0-9+/=]+)$/
       const authorization = req.headers['authorization']
