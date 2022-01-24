@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/delight-rpc/next.js/compare/v0.1.3...v0.1.4) (2022-01-24)
+
+
+### Features
+
+* add expectedVersion support ([e25e7db](https://github.com/delight-rpc/next.js/commit/e25e7dbc3c5addec5fbdc061d6193133538f6fb8))
+
 ### [0.1.3](https://github.com/delight-rpc/next.js/compare/v0.1.2...v0.1.3) (2022-01-16)
 
 
