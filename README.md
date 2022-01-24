@@ -33,6 +33,7 @@ function createServer<IAPI>(
 , options: {
     basicAuth?: (username: string, password: string) => PromiseLike<boolean> | boolean
   , parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+  , version?: `${number}.${number}.${number}`
   }
 ): (req: NextApiRequest, res: NextApiResponse) => Promise<void>
 ```

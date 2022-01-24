@@ -6,6 +6,7 @@ export function createServer<IAPI>(
 , options: {
     basicAuth?: (username: string, password: string) => PromiseLike<boolean> | boolean
   , parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+  , version?: `${number}.${number}.${number}`
   }
 ): (req: NextApiRequest, res: NextApiResponse) => Promise<void> {
   return async function (req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -34,6 +35,7 @@ export function createServer<IAPI>(
       api
     , req.body
     , options.parameterValidators
+    , options.version
     )
     res.status(200).json(response)
   }
