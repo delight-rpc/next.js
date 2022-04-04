@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/delight-rpc/next.js/compare/v0.2.0...v0.2.1) (2022-04-04)
+
+
+### Features
+
+* add validators ([6c56e2d](https://github.com/delight-rpc/next.js/commit/6c56e2ddd6c7b0fa03a55d3644dcb22855e20d25))
+
 ## [0.2.0](https://github.com/delight-rpc/next.js/compare/v0.1.4...v0.2.0) (2022-02-10)
 
 
