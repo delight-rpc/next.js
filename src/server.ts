@@ -31,12 +31,18 @@ export function createServer<IAPI>(
   }
 
   async function handle(req: NextApiRequest, res: NextApiResponse): Promise<void> {
-    const response = await DelightRPC.createResponse(
-      api
-    , req.body
-    , options.parameterValidators
-    , options.version
-    )
-    res.status(200).json(response)
+    const request = req.body
+    if (DelightRPC.isRequest(request) || DelightRPC.isBatchRequest(request)) {
+      const response = await DelightRPC.createResponse(
+        api
+      , req.body
+      , options.parameterValidators
+      , options.version
+      )
+
+      res.status(200).json(response)
+    } else {
+      res.status(400).send('The payload is not a valid Delight RPC request.')
+    }
   }
 }
