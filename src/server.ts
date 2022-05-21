@@ -4,10 +4,11 @@ import { isNull } from '@blackglory/prelude'
 
 export function createServer<IAPI>(
   api: DelightRPC.ImplementationOf<IAPI>
-, { basicAuth, parameterValidators, version }: {
+, { basicAuth, parameterValidators, version, ownPropsOnly }: {
     basicAuth?: (username: string, password: string) => PromiseLike<boolean> | boolean
-  , parameterValidators?: DelightRPC.ParameterValidators<IAPI>
-  , version?: `${number}.${number}.${number}`
+    parameterValidators?: DelightRPC.ParameterValidators<IAPI>
+    version?: `${number}.${number}.${number}`
+    ownPropsOnly?: boolean
   } = {}
 ): (req: NextApiRequest, res: NextApiResponse) => Promise<void> {
   return async function (req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -40,6 +41,7 @@ export function createServer<IAPI>(
       , {
           parameterValidators
         , version
+        , ownPropsOnly
         }
       )
 
