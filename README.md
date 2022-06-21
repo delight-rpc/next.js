@@ -35,6 +35,7 @@ function createServer<IAPI>(
     parameterValidators?: DelightRPC.ParameterValidators<IAPI>
     version?: `${number}.${number}.${number}`
     ownPropsOnly?: boolean
+    channel?: string | RegExp | AnyChannel
   }
 ): (req: NextApiRequest, res: NextApiResponse) => Promise<void>
 ```
