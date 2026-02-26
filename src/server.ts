@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as DelightRPC from 'delight-rpc'
-import { isNull } from '@blackglory/prelude'
+import { isntUndefined, isNull } from '@blackglory/prelude'
 import { AbortController } from 'extra-abort'
 import { SyncDestructor } from 'extra-defer'
 import { HashMap } from '@blackglory/structures'
@@ -55,9 +55,9 @@ export function createServer<IAPI>(
           result.groups.credentials
         , 'base64'
         ).toString('utf8')
-        const [username, password] = credentials.split(':')
+        const [username, password] = credentials.split(':') as [string, string | undefined]
 
-        if (await basicAuth(username, password)) {
+        if (isntUndefined(password) && await basicAuth(username, password)) {
           return await handleMessage(req, res)
         }
       }
