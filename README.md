@@ -22,7 +22,9 @@ const api: IAPI = {
   }
 }
 
-export default createServer(api, {})
+const [server] = createServer(api, {})
+
+export default server
 ```
 
 ## API
@@ -37,5 +39,8 @@ function createServer<IAPI>(
     ownPropsOnly?: boolean
     channel?: string | RegExp | AnyChannel
   }
-): (req: NextApiRequest, res: NextApiResponse) => Promise<void>
+): [
+  server: (req: NextApiRequest, res: NextApiResponse) => Promise<void>
+, close: () => void
+]
 ```
