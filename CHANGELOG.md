@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/delight-rpc/next.js/compare/v0.6.0...v0.6.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* **server:** signal ([e1936cb](https://github.com/delight-rpc/next.js/commit/e1936cbe686b38074910442b0cc6470ab584940a))
+
 ## [0.6.0](https://github.com/delight-rpc/next.js/compare/v0.5.3...v0.6.0) (2026-02-26)
 
 
