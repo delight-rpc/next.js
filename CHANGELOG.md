@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/delight-rpc/next.js/compare/v0.6.2...v0.6.3) (2026-02-26)
+
+
+### Features
+
+* add support for next@^16.0.0 ([f3cb239](https://github.com/delight-rpc/next.js/commit/f3cb239a46561f634aebed19d0884201f44b1e01))
+* **auth:** improve robustness ([163c93f](https://github.com/delight-rpc/next.js/commit/163c93f0c4724cac3d7d0e5d0e2f82a6cd2c2e5d))
+
 ### [0.6.2](https://github.com/delight-rpc/next.js/compare/v0.6.1...v0.6.2) (2026-02-26)
 
 
