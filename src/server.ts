@@ -91,6 +91,7 @@ export function createServer<IAPI>(
         , version
         , ownPropsOnly
         , channel
+        , signal: controller.signal
         }
       )
 
