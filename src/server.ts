@@ -119,7 +119,7 @@ export function createServer<IAPI>(
       } else {
         res
           .status(400)
-          .send(`The server does not support this channel.`)
+          .send('The server does not support this channel.')
       }
     } else {
       res
