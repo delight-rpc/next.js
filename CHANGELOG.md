@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/delight-rpc/next.js/compare/v0.5.3...v0.6.0) (2026-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Node.js v16 => Node.js v22
+- Modified the return value of `createServer()`
+
+### Features
+
+* add support for `DelightRPC.Abort` and delight-rpc@^7.0.0 ([4d48ba6](https://github.com/delight-rpc/next.js/commit/4d48ba6176748a85d50972d9b775e661abc03b6f))
+
 ### [0.5.3](https://github.com/delight-rpc/next.js/compare/v0.5.2...v0.5.3) (2025-04-06)
 
 ### [0.5.2](https://github.com/delight-rpc/next.js/compare/v0.5.1...v0.5.2) (2023-12-03)
