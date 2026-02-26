@@ -83,26 +83,30 @@ export function createServer<IAPI>(
       channelIdToController.set(message, controller)
       destructor.defer(() => channelIdToController.delete(message))
 
-      const response = await DelightRPC.createResponse(
-        api
-      , req.body
-      , {
-          parameterValidators
-        , version
-        , ownPropsOnly
-        , channel
-        , signal: controller.signal
-        }
-      )
+      try {
+        const response = await DelightRPC.createResponse(
+          api
+        , req.body
+        , {
+            parameterValidators
+          , version
+          , ownPropsOnly
+          , channel
+          , signal: controller.signal
+          }
+        )
 
-      if (isNull(response)) {
-        res
-          .status(400)
-          .send('The server does not support this channel.')
-      } else {
-        res
-          .status(200)
-          .json(response)
+        if (isNull(response)) {
+          res
+            .status(400)
+            .send('The server does not support this channel.')
+        } else {
+          res
+            .status(200)
+            .json(response)
+        }
+      } finally {
+        destructor.execute()
       }
     } else if (DelightRPC.isAbort(message)) {
       if (DelightRPC.matchChannel(message, channel)) {
